@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Placement Eligibility</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .student {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid black;
+            display: inline-block;
+            width: 220px;
+        }
+        .red {
+            background-color: red;
+            color: white;
+        }
+        .orange {
+            background-color: orange;
+            color: black;
+        }
+    </style>
+    <script>
+        function displayStudents() {
+            let students = [
+                { name: "Student 1", cgpa: 7.2 },
+                { name: "Student 2", cgpa: 7.4 },
+                { name: "Student 3", cgpa: 7.6 },
+                { name: "Student 4", cgpa: 7.8 },
+                { name: "Student 5", cgpa: 8.0 },
+                { name: "Student 6", cgpa: 7.3 },
+                { name: "Student 7", cgpa: 8.2 },
+                { name: "Student 9", cgpa: 8.4 },
+                { name: "Student 10", cgpa: 7.5 }
+            ];
+            
+            let container = document.getElementById("student-container");
+            students.forEach(student => {
+                let div = document.createElement("div");
+                div.classList.add("student");
+                
+                if (student.cgpa >= 7.2 && student.cgpa <= 7.5) {
+                    div.classList.add("red");
+                    div.innerHTML = `${student.name} - CGPA: ${student.cgpa} <br> Not allowed to placement drive`;
+                } else if (student.cgpa > 7.5 && student.cgpa <= 8.5) {
+                    div.classList.add("orange");
+                    div.innerHTML = `${student.name} - CGPA: ${student.cgpa} <br> Maybe placed`;
+                }
+                container.appendChild(div);
+            });
+        }
+    </script>
+</head>
+<body onload="displayStudents()">
+    <h1>Placement Drive Eligibility</h1>
+    <div id="student-container"></div>
+</body>
+</html>

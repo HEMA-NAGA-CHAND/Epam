@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different HTML Tables</title>
+</head>
+<body>
+
+    <h2>1. Basic Table</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>24</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>27</td>
+            <td>Los Angeles</td>
+        </tr>
+    </table>
+
+    <h2>2. Table with Colspan</h2>
+    <table border="1">
+        <tr>
+            <th colspan="2">Full Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <h2>3. Table with Rowspan</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th rowspan="2">Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Emma</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>Math</td>
+            <td>92</td>
+        </tr>
+    </table>
+
+    <h2>4. Nested Table</h2>
+    <table border="1">
+        <tr>
+            <th>Category</th>
+            <th>Items</th>
+        </tr>
+        <tr>
+            <td>Fruits</td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <td>Apple</td>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <h2>5. Table with Header, Body, and Footer</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>$500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>$1500</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

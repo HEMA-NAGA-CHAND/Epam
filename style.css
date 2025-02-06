@@ -1,0 +1,33 @@
+body {
+    background-color: blanchedalmond;
+}
+
+h1 {
+    color: brown;
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    padding: 20px;
+    color: rgb(19, 84, 4);
+    text-align: center;
+}
+
+button {
+    background-color: green;
+    font-size: 2px;
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color:red;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    transition: 30s;
+    border-radius: 5px;
+}

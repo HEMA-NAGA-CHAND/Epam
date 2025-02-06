@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payslip Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid black;
+            width: 300px;
+            background-color: #f4f4f4;
+        }
+        input, select, button {
+            margin: 10px;
+            padding: 5px;
+            width: 90%;
+        }
+    </style>
+    <script>
+        function calculatePayslip() {
+            const basic = 37900;
+            const totalDays = 30;
+            let presentDays = parseInt(document.getElementById("presentDays").value);
+            let accommodation = document.getElementById("accommodation").value;
+
+            if (isNaN(presentDays) || presentDays < 0 || presentDays > totalDays) {
+                alert("Please enter a valid number of present days between 0 and 30.");
+                return;
+            }
+
+            let salary = (basic / totalDays) * presentDays;
+            let dns = 0.09 * basic;
+            let hra = 0;
+
+            if (accommodation === "hostel") hra = 0.3 * basic;
+            else if (accommodation === "room") hra = 0.2 * basic;
+
+            let netSalary = salary - dns + hra;
+
+            document.getElementById("result").innerHTML = `
+                <h3>Payslip Summary</h3>
+                <p>Basic Salary: $${basic}</p>
+                <p>Salary Earned: $${salary.toFixed(2)}</p>
+                <p>DNS (9%): $${dns.toFixed(2)}</p>
+                <p>HRA: $${hra.toFixed(2)}</p>
+                <h4>Net Salary: $${netSalary.toFixed(2)}</h4>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <h1>Employee Payslip Form</h1>
+    <div class="container">
+        <label for="presentDays">Days Present:</label>
+        <input type="number" id="presentDays" min="0" max="30">
+        
+        <label for="accommodation">Accommodation Type:</label>
+        <select id="accommodation">
+            <option value="home">Home</option>
+            <option value="room">Room</option>
+            <option value="hostel">Hostel</option>
+        </select>
+        
+        <button onclick="calculatePayslip()">Calculate Payslip</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
