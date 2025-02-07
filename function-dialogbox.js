@@ -10,7 +10,7 @@ function Validate(permission) {
         let cnfrm = confirm("Are you Sure")
         if(cnfrm)
         {
-            document.write("Welcome to the page: ",name)
+            document.write("Welcome to the page:  ",name)
         }
         else
         {
