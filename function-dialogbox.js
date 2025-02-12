@@ -7,14 +7,21 @@ function Validate(permission) {
     if(permission)
     {
         let name = prompt("Enter your name:")
-        let cnfrm = confirm("Are you Sure")
-        if(cnfrm)
+        if(name)
         {
-            document.write("Welcome to the page:  ",name)
+            let cnfrm = confirm("Are you Sure")
+            if(cnfrm)
+            {
+                document.write("Welcome to the page:  ",name)
+            }
+            else
+            {
+                Validate(true)
+            }
         }
         else
         {
-            Validate()
+            Validate(true)
         }
     }
     else
