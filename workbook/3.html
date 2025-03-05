@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Print Styles Example</title>
+    <style>
+        /* Screen Styles */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            color: #333;
+        }
+
+        header, main, footer {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ads {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                color: black;
+                font-size: 12pt;
+                padding: 0;
+            }
+
+            header {
+                text-align: center;
+            }
+
+            .ads, footer {
+                display: none; /* Hide ads and contact info for print */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Print-Friendly Web Page</h1>
+        <p>This content will be styled for both screen and print.</p>
+    </header>
+
+    <main>
+        <section class="content">
+            <p>This section contains important information that should appear in the print view.</p>
+        </section>
+        <section class="ads">
+            <p>This is an ad or extra content that should be hidden when printing.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made By <b>B.Hema Naga Chand</b></p>
+    </footer>
+</body>
+</html>

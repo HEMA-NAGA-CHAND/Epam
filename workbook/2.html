@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple HTML5 Page</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<center>
+<body>
+
+    <header>
+        <h1>My Simple Webpage</h1>
+        <nav>
+            <a href="#home">Home</a><br>
+            <a href="#about">About</a><br>
+            <a href="#contact">Contact</a><br>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to My Page</h2>
+            <img src="sample.webp" alt="Sample Image" width="300">
+        </section>
+
+        <section id="about">
+            <h2>Sample Table</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>Hema</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Naga Chand</td>
+                    <td>19</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <input type="text" id="name" name="name" required><br><br>
+
+                <input type="text" id="rollnumber" name="rollnumber" required><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made By <b>B.Hema Naga Chand</b></p>
+    </footer>
+
+</body>
+</center>
+</html>

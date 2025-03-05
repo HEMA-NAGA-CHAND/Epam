@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profit Calculator</title>
+</head>
+<center>
+<body>
+    <h1>Profit Calculator</h1>
+    Ammount:
+    <input type="number" id="amountInput" placeholder="Deposit Amount"><br><br>
+    Intrest Rate:
+    <input type="number" id="interestInput" placeholder="Interest Rate (%)"><br><br>
+    Time(Yrs):
+    <input type="number" id="timeInput" placeholder="Time (years)"><br><br>
+
+    <button onclick="calculateProfit()">Calculate</button>
+
+    <p>Profit: <span id="result"></span></p>
+
+    <script>
+        function calculateProfit() {
+            const amount = parseFloat(document.getElementById('amountInput').value);
+            const interestRate = parseFloat(document.getElementById('interestInput').value) / 100;
+            const time = parseFloat(document.getElementById('timeInput').value);
+
+            const profit = amount * interestRate * time; // Simple interest formula
+            document.getElementById('result').textContent = profit.toFixed(2);
+        }
+    </script>
+</body>
+</center>
+</html>
