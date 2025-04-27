@@ -1,0 +1,20 @@
+#puzzle {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-gap: 5px;
+    margin: 20px 0;
+  }
+  .tile {
+    width: 60px;
+    height: 60px;
+    background: lightblue;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .empty {
+    background: white;
+  }
+  

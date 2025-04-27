@@ -1,0 +1,15 @@
+/* Task 1 */
+#btn { margin: 10px; }
+
+/* Task 2 */
+#box {
+  width: 100px;
+  height: 50px;
+  background: lightblue;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px;
+}
+
+/* Task 3 */
+#input { margin: 10px; }

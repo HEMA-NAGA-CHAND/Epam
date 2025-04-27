@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 8 - Error Handling & Logging</title>
+  <link rel="stylesheet" href="8.css">
+</head>
+<body>
+  <h1>Lab 8: Error Handling and Logging Simulation</h1>
+  
+  <div id="app">
+    <button onclick="trigger404Error()">Trigger 404 Error</button>
+    <button onclick="triggerInputError()">Trigger Input Error</button>
+    <button onclick="clearLogs()">Clear Logs</button>
+    
+    <div class="log-container">
+      <h2>Logged Errors:</h2>
+      <ul id="logList"></ul>
+    </div>
+  </div>
+
+  <script src="8.js"></script>
+</body>
+</html>

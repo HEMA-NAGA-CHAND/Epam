@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Filter Example</title>
+</head>
+<body>
+  <h2>Open the Console to See the Results</h2>
+
+  <script>
+    // Step 1: Define an array
+    const numbers = [1, 2, 3, 4, 5, 6];
+
+    // Step 2: Create a filter function
+    function filterArray(arr, callback) {
+      // Step 3: Use .filter()
+      return arr.filter(callback);
+    }
+
+    // Step 5: Call with different conditions
+    console.log("Even numbers:", filterArray(numbers, n => n % 2 === 0));
+    console.log("Numbers > 3:", filterArray(numbers, n => n > 3));
+  </script>
+</body>
+</html>
